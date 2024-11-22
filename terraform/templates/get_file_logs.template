@@ -1,0 +1,14 @@
+{
+  "clientIp": "$input.params('X-Forwarded-For')",
+  "sourceIP": "$context.identity.sourceIp",
+  "requestId": "$context.requestId",
+  "resourcePath": "$context.resourcePath",
+  "parameters": {
+    "query": {
+      "logs_type": "$input.params().querystring.get('logs_type')",
+      "filename": "$input.params().querystring.get('filename')",
+      "page_size": "$input.params().querystring.get('page_size')",
+      "page_number": "$input.params().querystring.get('page_number')"
+    }
+  }
+}

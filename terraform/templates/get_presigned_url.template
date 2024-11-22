@@ -1,0 +1,11 @@
+{
+  "clientIp": "$input.params('X-Forwarded-For')",
+  "sourceIP": "$context.identity.sourceIp",
+  "requestId": "$context.requestId",
+  "resourcePath": "$context.resourcePath",
+  "parameters": {
+    "query": {
+      "name": "$input.params().querystring.get('name')"
+    }
+  }
+}
